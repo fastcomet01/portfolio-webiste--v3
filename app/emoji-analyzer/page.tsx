@@ -1,5 +1,6 @@
 import EmojiAnalyzerDemo from '@/components/emoji-analyzer-demo'
 import { EmojiWithAccessibility, EmojiWithDescription } from '@/components/emoji-accessibility'
+import InteractiveEmojiWrapper from '@/components/interactive-emoji-wrapper'
 
 export default function EmojiAnalyzerPage() {
   return (
@@ -109,10 +110,6 @@ export default function EmojiAnalyzerPage() {
                 />
               </div>
             </div>
-
-import InteractiveEmojiWrapper from '@/components/interactive-emoji-wrapper'
-
-// ... existing code ...
 
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
