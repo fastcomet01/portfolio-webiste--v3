@@ -60,25 +60,25 @@ export default function AboutPage() {
              staggerChildren
            >
              {/* Subtle accent gradient overlay */}
-             <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-400/10 rounded-3xl"></div>
+ <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-emerald-400/10 rounded-3xl white-glow"></div>
             
             <div className="pointer-events-none absolute inset-0 opacity-5 mix-blend-soft-light">
               <DotGridShader />
             </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto text-center px-8 sm:px-12 md:px-16 lg:px-20">
+            <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-20">
               <AnimatedHeading
-                className="hero-title font-black leading-[0.9] tracking-tight mb-dynamic-sm md:mb-dynamic-md text-fit text-white drop-shadow-lg"
+                className="hero-title font-black leading-tight md:leading-[0.9] tracking-tight mb-dynamic-md md:mb-dynamic-lg text-white drop-shadow-lg"
                 lines={["About"]}
                 startDelay={0.2}
               />
 
               <RevealOnView
                 as="h2"
-                className="text-dynamic-xl md:text-dynamic-2xl font-bold text-white mb-dynamic-sm text-fit drop-shadow-md"
+                className="text-dynamic-base sm:text-dynamic-lg md:text-dynamic-xl font-bold text-white mb-dynamic-md drop-shadow-md leading-snug break-words whitespace-normal"
                 delay={0.6}
               >
-                Passionate Product Designer
+                Ready to bring your ideas to life?
               </RevealOnView>
 
               <RevealOnView
@@ -86,23 +86,23 @@ export default function AboutPage() {
                 className="hero-subtitle text-white/90 max-w-3xl mx-auto mb-dynamic-md md:mb-dynamic-lg leading-relaxed text-fit drop-shadow-sm"
                 delay={0.8}
               >
-                Who believes great design should be both beautiful and functional, creating digital experiences that truly make a difference.
+                Who believes great design should be both beautiful and functional, creating digital experiences that truly make a difference
               </RevealOnView>
 
               <RevealOnView
                 as="div"
-                className="flex flex-wrap justify-center items-center gap-dynamic-sm md:gap-dynamic-md text-dynamic-sm md:text-dynamic-base text-slate-100/80"
+                className="info-row flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-3 md:gap-4 space-y-2 sm:space-y-0 text-dynamic-sm md:text-dynamic-base text-slate-100/80"
                 delay={1.0}
               >
-                <div className="flex items-center gap-dynamic-xs text-fit">
+                <div className="flex items-center gap-2 sm:gap-3 whitespace-normal break-words w-full sm:w-auto justify-center sm:justify-start">
                   <span>📍</span>
                   <span>London</span>
                 </div>
-                <div className="flex items-center gap-dynamic-xs text-fit">
+                <div className="flex items-center gap-2 sm:gap-3 whitespace-normal break-words w-full sm:w-auto justify-center sm:justify-start">
                   <span>📅</span>
                   <span>3+ years experience</span>
                 </div>
-                <div className="flex items-center gap-dynamic-xs text-fit">
+                <div className="flex items-center gap-2 sm:gap-3 whitespace-normal break-words w-full sm:w-auto justify-center sm:justify-start">
                    <span>🎵</span>
                    <span>Music producer</span>
                  </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
                     During my internships I picked up practical knowledge of system design, cloud architecture, and the use of different development frameworks, which gave me a broader perspective on building scalable and efficient solutions.
                   </p>
                   <p className="text-fit drop-shadow-sm">
-                    I also grew curious about UI/UX design, fascinated by how functionality and simplicity can be combined to create meaningful user experiences. With a long-standing interest in mathematical concepts, I enjoy exploring how they can be applied to practical design and engineering problems.
+                    I also grew curious about UI/UX design and startups, interested by how functionality and simplicity can be combined to create meaningful user experiences while also proving the idea on the market. With a long-standing interest in ai and machine learning development, in my free time I read and watch on those topics.
                   </p>
                   <p className="text-fit drop-shadow-sm">
                     Looking ahead, I'm deeply intrigued by the future of AI and the potential of emerging tools to reshape how we interact with technology.

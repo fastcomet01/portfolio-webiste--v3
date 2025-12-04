@@ -81,12 +81,12 @@ export default function Page() {
             <RevealOnView
               as="div"
               intensity="hero"
-              className="container-hero relative flex h-full flex-col justify-between overflow-hidden rounded border-2 border-solid border-white rounded border border-white/10 bg-neutral-900/60 p-dynamic-md sm:p-dynamic-lg"
+              className="container-hero relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-2 border-solid border-white rounded border border-white/10 bg-neutral-900/60 p-dynamic-md sm:p-dynamic-lg"
               staggerChildren
             >
               {/* Subtle pink gradient background overlay (restored) */}
               <div
-                className="pointer-events-none absolute inset-0 rounded bg-gradient-to-br from-pink-500/15 via-fuchsia-500/10 to-rose-500/15"
+                className="pointer-events-none absolute inset-0 rounded bg-gradient-to-br from-pink-500/30 via-fuchsia-500/20 to-rose-500/30"
                 aria-hidden="true"
                 data-no-animate
               />
@@ -98,7 +98,7 @@ export default function Page() {
                 {/* Wordmark */}
                 <div className="mb-dynamic-md flex items-center gap-dynamic-sm">
                   <div className="text-dynamic-2xl font-extrabold tracking-tight text-fit">Ivan Smirnov</div>
-                  <div className="h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
+                  <div className="h-2 w-2 rounded-full bg-green-500" />
                 </div>
 
                 <ClickableAnimatedHeading
