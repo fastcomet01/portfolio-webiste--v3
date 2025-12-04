@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import DotGridShader from "@/components/DotGridShader"
 import RevealOnView from "@/components/reveal-on-view"
 import AnimatedHeading from "@/components/animated-heading"
+import StripDots from "@/components/strip-dots"
 
 export default function AboutPage() {
   const skills = [
@@ -238,7 +239,7 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              <div className="space-y-dynamic-md md:space-y-dynamic-lg px-4 sm:px-6 md:px-8 mx-2 sm:mx-4">
+              <StripDots className="space-y-dynamic-md md:space-y-dynamic-lg px-4 sm:px-6 md:px-8 mx-2 sm:mx-4">
                 {experience.map((job, index) => (
                   <RevealOnView
                     key={index}
@@ -246,8 +247,7 @@ export default function AboutPage() {
                     className="border-l-2 border-cyan-400/40 pl-dynamic-md md:pl-dynamic-lg pb-dynamic-md md:pb-dynamic-lg last:pb-0 ml-2 sm:ml-4 relative"
                     delay={0.8 + index * 0.1}
                   >
-                    {/* Timeline dot */}
-                    <div className="absolute -left-2 top-2 w-3 h-3 bg-gradient-to-r from-cyan-400 to-teal-400 rounded-full shadow-lg"></div>
+                    
                     
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-dynamic-xs md:mb-dynamic-sm px-2 sm:px-4">
                       <h3 className="text-dynamic-lg md:text-dynamic-xl lg:text-dynamic-2xl font-semibold text-white drop-shadow-sm text-fit">
@@ -265,7 +265,7 @@ export default function AboutPage() {
                     </p>
                   </RevealOnView>
                 ))}
-              </div>
+              </StripDots>
             </div>
           </RevealOnView>
 
