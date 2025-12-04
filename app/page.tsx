@@ -98,7 +98,7 @@ export default function Page() {
                 {/* Wordmark */}
                 <div className="mb-dynamic-md flex items-center gap-dynamic-sm">
                   <div className="text-dynamic-2xl font-extrabold tracking-tight text-fit">Ivan Smirnov</div>
-                  <div className="h-2 w-2 rounded-full bg-white/60" aria-hidden="true" />
+                  <div className="h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
                 </div>
 
                 <ClickableAnimatedHeading
