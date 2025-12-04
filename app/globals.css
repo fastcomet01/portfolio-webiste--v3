@@ -497,6 +497,58 @@
   }
 }
 
+/* Red glow on click for 'Get in touch' buttons */
+@layer utilities {
+.glow-red-click {
+  box-shadow: 0 0 0 2px #FF000080, 0 0 12px 4px #FF000080;
+  -webkit-animation: red-glow-pulse 500ms ease-out;
+  animation: red-glow-pulse 500ms ease-out;
+  transition: box-shadow 200ms ease, filter 200ms ease, opacity 200ms ease;
+  will-change: box-shadow, filter, opacity;
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  overflow: visible;
+}
+}
+
+@-webkit-keyframes red-glow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #FF000000;
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 0 2px #FF000080, 0 0 16px 6px #FF000080;
+    filter: brightness(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 0 #FF000000;
+    filter: brightness(1);
+  }
+}
+
+@keyframes red-glow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 #FF000000;
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 0 2px #FF000080, 0 0 16px 6px #FF000080;
+    filter: brightness(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 0 #FF000000;
+    filter: brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-red-click {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
 /* Fallback for older browsers without box-shadow support */
 @supports not (box-shadow: 0 0 1px #000) {
   .white-glow {

@@ -4,6 +4,7 @@ import DotGridShader from "@/components/DotGridShader"
 import RevealOnView from "@/components/reveal-on-view"
 import AnimatedHeading from "@/components/animated-heading"
 import { Mail, Calendar, MessageCircle, Download } from "lucide-react"
+import GlowOnClick from "@/components/GlowOnClick"
 
 export default function HireMePage() {
   const services = [
@@ -79,22 +80,26 @@ export default function HireMePage() {
 
           {/* Contact Section */}
           <RevealOnView delay={200} className="mb-dynamic-xl">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-dynamic-lg text-center">
-              <h2 className="text-dynamic-xl font-bold mb-dynamic-md text-fit">Get In Touch</h2>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-dynamic-lg text-center">
+                <h2 className="text-dynamic-xl font-bold mb-dynamic-md text-fit">Get In Touch</h2>
               <div className="flex flex-col sm:flex-row gap-dynamic-md justify-center items-center">
-                <a 
-                  href="mailto:nme3015@gmail.com"
-                  className="inline-flex items-center gap-dynamic-xs bg-white text-black px-dynamic-lg py-dynamic-sm rounded-full font-medium hover:bg-white/90 transition-colors text-fit"
-                >
-                  <Mail className="h-5 w-5" />
-                  nme3015@gmail.com
-                </a>
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Schedule a Call
-                </Button>
+                <GlowOnClick>
+                  <a 
+                    href="mailto:nme3015@gmail.com"
+                    className="inline-flex items-center gap-dynamic-xs bg-white text-black px-dynamic-lg py-dynamic-sm rounded-full font-medium hover:bg-white/90 transition-colors text-fit"
+                  >
+                    <Mail className="h-5 w-5" />
+                    nme3015@gmail.com
+                  </a>
+                </GlowOnClick>
+                <GlowOnClick>
+                  <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    Schedule a Call
+                  </Button>
+                </GlowOnClick>
               </div>
-            </div>
+              </div>
           </RevealOnView>
 
           {/* Services Section */}

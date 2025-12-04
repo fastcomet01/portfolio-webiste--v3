@@ -5,6 +5,7 @@ import DotGridShader from "@/components/DotGridShader"
 import RevealOnView from "@/components/reveal-on-view"
 import AnimatedHeading from "@/components/animated-heading"
 import StripDots from "@/components/strip-dots"
+import GlowOnClick from "@/components/GlowOnClick"
 
 export default function AboutPage() {
   const skills = [
@@ -67,24 +68,18 @@ export default function AboutPage() {
               <DotGridShader />
             </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-20">
+            <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-8 md:px-16 lg:px-20 space-y-4 sm:space-y-5 md:space-y-6">
               <AnimatedHeading
                 className="hero-title font-black leading-tight md:leading-[0.9] tracking-tight mb-dynamic-md md:mb-dynamic-lg text-white drop-shadow-lg"
                 lines={["About"]}
                 startDelay={0.2}
               />
 
-              <RevealOnView
-                as="h2"
-                className="text-dynamic-base sm:text-dynamic-lg md:text-dynamic-xl font-bold text-white mb-dynamic-md drop-shadow-md leading-snug break-words whitespace-normal"
-                delay={0.6}
-              >
-                Ready to bring your ideas to life?
-              </RevealOnView>
+
 
               <RevealOnView
                 as="p"
-                className="hero-subtitle text-white/90 max-w-3xl mx-auto mb-dynamic-md md:mb-dynamic-lg leading-relaxed text-fit drop-shadow-sm"
+                className="hero-subtitle text-white/90 max-w-3xl mx-auto mb-dynamic-md md:mb-dynamic-lg leading-relaxed md:leading-loose break-words whitespace-normal px-2 sm:px-4 drop-shadow-sm"
                 delay={0.8}
               >
                 Who believes great design should be both beautiful and functional, creating digital experiences that truly make a difference
@@ -291,7 +286,9 @@ export default function AboutPage() {
                   size="lg"
                   className="rounded-full text-dynamic-base md:text-dynamic-lg p-dynamic-md md:p-dynamic-lg bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-semibold transition-all duration-300 border-0"
                 >
-                  <Link href="/contact">Get in touch</Link>
+                  <GlowOnClick>
+                    <Link href="/contact">Get in touch</Link>
+                  </GlowOnClick>
                 </Button>
               </div>
             </div>

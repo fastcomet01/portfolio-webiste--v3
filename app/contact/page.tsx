@@ -4,6 +4,7 @@ import DotGridShader from "@/components/DotGridShader"
 import RevealOnView from "@/components/reveal-on-view"
 import AnimatedHeading from "@/components/animated-heading"
 import { Mail, Phone, Linkedin, Github, MapPin, Clock, MessageCircle, Calendar } from "lucide-react"
+import GlowOnClick from "@/components/GlowOnClick"
 
 export default function ContactPage() {
   const contactMethods = [
@@ -100,7 +101,7 @@ export default function ContactPage() {
               {/* Main animated heading */}
               <div className="relative mb-dynamic-md md:mb-dynamic-lg">
                 <AnimatedHeading
-                  className="hero-title font-black leading-[0.9] tracking-tight text-fit relative z-10"
+                  className="hero-title font-medium leading-[1.0] md:leading-[0.95] tracking-wider md:tracking-widest text-fit relative z-10"
                   lines={["Ready to bring your ideas to life?"]}
                   startDelay={0.2}
                 />
@@ -165,21 +166,23 @@ export default function ContactPage() {
                   delay={0.3 + index * 0.1}
                   className="group"
                 >
-                  <a
-                    href={method.href}
-                    target={method.href.startsWith('http') ? '_blank' : undefined}
-                    rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="block bg-white/5 backdrop-blur-sm border border-red-500/30 rounded-2xl p-dynamic-lg hover:bg-white/10 hover:border-red-500/50 transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(239,68,68,0.15)] hover:shadow-[0_0_30px_rgba(239,68,68,0.25)]"
-                  >
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-dynamic-sm group-hover:bg-white/20 transition-colors">
-                        <method.icon className="h-6 w-6" />
+                  <GlowOnClick>
+                    <a
+                      href={method.href}
+                      target={method.href.startsWith('http') ? '_blank' : undefined}
+                      rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-dynamic-lg hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                    >
+                      <div className="flex flex-col items-center text-center">
+                        <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-dynamic-sm group-hover:bg-white/20 transition-colors">
+                          <method.icon className="h-6 w-6" />
+                        </div>
+                        <h3 className="font-semibold mb-dynamic-xs text-dynamic-base text-fit">{method.label}</h3>
+                        <p className="text-white/70 text-dynamic-sm mb-dynamic-xs text-fit break-all">{method.value}</p>
+                        <p className="text-white/50 text-dynamic-xs text-fit">{method.description}</p>
                       </div>
-                      <h3 className="font-semibold mb-dynamic-xs text-dynamic-base text-fit">{method.label}</h3>
-                      <p className="text-white/70 text-dynamic-sm mb-dynamic-xs text-fit break-all">{method.value}</p>
-                      <p className="text-white/50 text-dynamic-xs text-fit">{method.description}</p>
-                    </div>
-                  </a>
+                    </a>
+                  </GlowOnClick>
                 </RevealOnView>
               ))}
             </div>
