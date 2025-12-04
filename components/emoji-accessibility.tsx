@@ -30,23 +30,25 @@ export function EmojiWithAccessibility({
   const [isFocused, setIsFocused] = useState(false)
 
   useEffect(() => {
-    // Check for accessibility preferences
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    
-    setIsHighContrast(highContrastQuery.matches)
-    setPrefersReducedMotion(reducedMotionQuery.matches)
+    // Check for accessibility preferences - only run on client side
+    if (typeof window !== 'undefined') {
+      const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
+      const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+      
+      setIsHighContrast(highContrastQuery.matches)
+      setPrefersReducedMotion(reducedMotionQuery.matches)
 
-    // Listen for changes
-    const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches)
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
-    
-    highContrastQuery.addEventListener('change', handleHighContrastChange)
-    reducedMotionQuery.addEventListener('change', handleReducedMotionChange)
+      // Listen for changes
+      const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches)
+      const handleReducedMotionChange = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
+      
+      highContrastQuery.addEventListener('change', handleHighContrastChange)
+      reducedMotionQuery.addEventListener('change', handleReducedMotionChange)
 
-    return () => {
-      highContrastQuery.removeEventListener('change', handleHighContrastChange)
-      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange)
+      return () => {
+        highContrastQuery.removeEventListener('change', handleHighContrastChange)
+        reducedMotionQuery.removeEventListener('change', handleReducedMotionChange)
+      }
     }
   }, [])
 
