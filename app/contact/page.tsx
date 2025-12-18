@@ -4,6 +4,8 @@ import DotGridShader from "@/components/DotGridShader"
 import RevealOnView from "@/components/reveal-on-view"
 import AnimatedHeading from "@/components/animated-heading"
 import { Mail, Phone, Linkedin, Github, MapPin, Clock, MessageCircle, Calendar } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import GlowOnClick from "@/components/GlowOnClick"
 
 export default function ContactPage() {
@@ -100,11 +102,7 @@ export default function ContactPage() {
             <div className="relative max-w-4xl mx-auto text-center">
               {/* Main animated heading */}
               <div className="relative mb-dynamic-md md:mb-dynamic-lg">
-                <AnimatedHeading
-                  className="hero-title font-medium leading-[1.0] md:leading-[0.95] tracking-wider md:tracking-widest text-fit relative z-10"
-                  lines={["Ready to bring your ideas to life?"]}
-                  startDelay={0.2}
-                />
+
                 
                 {/* Creative background animations */}
                 <div className="absolute inset-0 -z-10">
@@ -124,12 +122,12 @@ export default function ContactPage() {
               </div>
 
               <RevealOnView
-                as="p"
-                className="hero-subtitle text-white/80 max-w-3xl mx-auto mb-dynamic-md md:mb-dynamic-lg leading-relaxed text-fit font-medium"
-                delay={0.8}
-              >
-                I'm here to help you create exceptional digital experiences that make an impact.
-              </RevealOnView>
+                  as="p"
+                  className="hero-subtitle text-white max-w-3xl mx-auto mb-dynamic-md md:mb-dynamic-lg leading-relaxed text-dynamic-lg font-medium"
+                  delay={0.8}
+                >
+                  I'm here to help you create digital experiences that make an impact
+                </RevealOnView>
 
               <RevealOnView
                 as="div"
@@ -187,6 +185,31 @@ export default function ContactPage() {
               ))}
             </div>
           </RevealOnView>
+
+          {/* My Story */}
+          <RevealOnView delay={0.5} className="mb-dynamic-lg lg:mb-dynamic-xl">
+            <h2 className="text-dynamic-2xl md:text-dynamic-3xl font-bold text-center mb-dynamic-md lg:mb-dynamic-lg text-fit">
+              My Story
+            </h2>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-dynamic-lg md:p-dynamic-xl my-story-animated">
+              <div className="space-y-dynamic-md text-white/90 leading-relaxed">
+                <p className="text-fit">
+                  I'm currently a university student pursuing Computer Systems Engineering, where my journey began with coding in Python, focusing on algorithms and data structures.
+                </p>
+                <p className="text-fit">
+                  During my internships I picked up practical knowledge of system design, cloud architecture, and the use of different development frameworks, which gave me a broader perspective on building scalable and efficient solutions.
+                </p>
+                <p className="text-fit">
+                  I also grew curious about UI/UX design and startups, interested by how functionality and simplicity can be combined to create meaningful user experiences while also proving the idea on the market. With a long-standing interest in ai and machine learning development, in my free time I read and watch on those topics.
+                </p>
+                <p className="text-fit">
+                  Looking ahead, I'm deeply intrigued by the future of AI and the potential of emerging tools to reshape how we interact with technology.
+                </p>
+              </div>
+            </div>
+          </RevealOnView>
+
+          
 
 
 
