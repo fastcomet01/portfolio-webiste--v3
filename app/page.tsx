@@ -10,41 +10,41 @@ import RevealOnView from "@/components/reveal-on-view"
 export default function Page() {
   const projects = [
     {
-      title: "Walletly — Multi‑account mobile banking",
-      subtitle: "End‑to‑end product design",
+      title: "Union — your team's ultimate finance management tool",
+      subtitle: "Comprehensive financial dashboard and analytics",
       imageSrc: "/images/project-1.webp",
-      tags: ["Mobile", "Fintech", "UI/UX"],
-      href: "#project-1",
+      tags: ["Finance", "Dashboard", "Analytics"],
+      href: "https://union-financial-dashboard-126122738880.us-west1.run.app",
       priority: true,
       gradientFrom: "#0f172a",
       gradientTo: "#6d28d9",
     },
     {
-      title: "Nimbus — SaaS analytics",
-      subtitle: "Design automation systems & web app",
+      title: "ModelGuard — next-level for building automations and solving problems",
+      subtitle: "AI-powered automation and governance platform",
       imageSrc: "/images/project-2.webp",
-      tags: ["SaaS", "Design Automation Systems", "Web"],
-      href: "#project-2",
+      tags: ["AI", "Automation", "Governance"],
+      href: "https://ai-change-governance-8n8-clone-tool-g7r1-9t2a95x9v.vercel.app",
       priority: false,
       gradientFrom: "#111827",
       gradientTo: "#2563eb",
     },
     {
-      title: "Arcade — E‑commerce for streetwear",
-      subtitle: "Mobile‑first storefront",
+      title: "ShopGPT — your personal shopping assistant",
+      subtitle: "AI-enhanced shopping recommendations and discovery",
       imageSrc: "/images/project-3.webp",
-      tags: ["Commerce", "Mobile", "Brand"],
-      href: "#project-3",
+      tags: ["AI", "Shopping", "Recommendations"],
+      href: "https://shopping-recommendation-app-ai-enchanced-qv9y-lrop339io.vercel.app",
       priority: false,
       gradientFrom: "#0b132b",
       gradientTo: "#5bc0be",
     },
     {
-      title: "CareConnect — Patient portal",
-      subtitle: "Accessibility‑first UI",
+      title: "NextLink — most comprehensive link manager",
+      subtitle: "Enterprise-grade link management and analytics",
       imageSrc: "/images/project-4.webp",
-      tags: ["A11y", "Web App", "Health"],
-      href: "#project-4",
+      tags: ["Link Management", "Analytics", "Enterprise"],
+      href: "https://nextlink-126122738880.us-west1.run.app",
       priority: false,
       gradientFrom: "#0f172a",
       gradientTo: "#10b981",
@@ -168,7 +168,7 @@ export default function Page() {
                   <div className="group relative">
                     <Button asChild size="lg" className="relative rounded-full text-dynamic-base bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold transform transition-all duration-300 hover:scale-105 hover:bg-white/20 hover:border-white/40 hover:shadow-xl">
                       <Link href="/contact" className="flex items-center">
-                        Contact me
+                        About Me
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 " />
                       </Link>
                     </Button>
